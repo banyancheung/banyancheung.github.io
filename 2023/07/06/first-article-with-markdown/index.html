@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="code test     print &quot;Hello World!&quot;">
+    <meta name="description" content="code test Syntax HighlightingIn your fenced block, add an optional language identifier and we’ll run it through syntax highlighting (Support Languages). Code: 1234567891011121314151617181920212223func">
 <meta property="og:type" content="article">
 <meta property="og:title" content="first article with markdown">
 <meta property="og:url" content="https://zhangrong.cc/2023/07/06/first-article-with-markdown/index.html">
 <meta property="og:site_name" content="张先生的笔记本">
-<meta property="og:description" content="code test     print &quot;Hello World!&quot;">
+<meta property="og:description" content="code test Syntax HighlightingIn your fenced block, add an optional language identifier and we’ll run it through syntax highlighting (Support Languages). Code: 1234567891011121314151617181920212223func">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-07-06T07:17:06.000Z">
-<meta property="article:modified_time" content="2023-07-13T03:56:04.276Z">
+<meta property="article:modified_time" content="2023-07-13T06:19:27.784Z">
 <meta property="article:author" content="banyan cheung">
 <meta name="twitter:card" content="summary">
     
@@ -52,8 +52,6 @@
     
     <!-- rss -->
     
-    
-      <link rel="alternate" href="/true" title="张先生的笔记本" type="application/atom+xml" />
     
 	<!-- mathjax -->
 	
@@ -112,7 +110,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#code-test"><span class="toc-number">1.</span> <span class="toc-text">code test</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#code-test"><span class="toc-number">1.</span> <span class="toc-text">code test</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Syntax-Highlighting"><span class="toc-number">1.0.1.</span> <span class="toc-text">Syntax Highlighting</span></a></li></ol></li></ol></li></ol>
       </div>
     
   </span>
@@ -152,9 +150,12 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h2 id="code-test"><a href="#code-test" class="headerlink" title="code test"></a>code test</h2><pre><code class="sh">
-    print &quot;Hello World!&quot;
-</code></pre>
+    <h2 id="code-test"><a href="#code-test" class="headerlink" title="code test"></a>code test</h2><hr>
+<h4 id="Syntax-Highlighting"><a href="#Syntax-Highlighting" class="headerlink" title="Syntax Highlighting"></a>Syntax Highlighting</h4><p>In your fenced block, add an optional language identifier and we’ll run it through syntax highlighting (<a target="_blank" rel="noopener" href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">Support Languages</a>).</p>
+<p>Code:</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *vipRewardService)</span></span> GetAndSetDefaultRefundCalcIntervalTime() (<span class="type">int64</span>, <span class="type">error</span>) &#123;</span><br><span class="line">	interval, err := s.GetRefundCalcInterval()</span><br><span class="line">	<span class="keyword">var</span> triggerTime <span class="type">int64</span></span><br><span class="line">	<span class="keyword">if</span> interval == <span class="string">&quot;day&quot;</span> &#123;</span><br><span class="line">		nextDay := utils.GetBeginTimeStampOfDate(time.Now().AddDate(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>))</span><br><span class="line">		triggerTime = nextDay</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		t, err := strconv.Atoi(interval)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Errorf(<span class="string">&quot;err:%v&quot;</span>, err)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>, err</span><br><span class="line">		&#125;</span><br><span class="line">		triggerTime = time.Now().Unix() + <span class="type">int64</span>(t)</span><br><span class="line">	&#125;</span><br><span class="line">	_, err = global.GRedis.Set(context.Background(), <span class="string">&quot;vip_refund_calc_time&quot;</span>, triggerTime, <span class="number">0</span>).Result()</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Errorf(<span class="string">&quot;err:%v&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> triggerTime, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>asdsad <code>this is your code</code></p>
 
   </div>
 </article>
@@ -186,7 +187,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#code-test"><span class="toc-number">1.</span> <span class="toc-text">code test</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#code-test"><span class="toc-number">1.</span> <span class="toc-text">code test</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Syntax-Highlighting"><span class="toc-number">1.0.1.</span> <span class="toc-text">Syntax Highlighting</span></a></li></ol></li></ol></li></ol>
       </div>
     
 
