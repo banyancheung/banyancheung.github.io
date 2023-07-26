@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://zhangrong.cc/2022/05/09/Go-Escape-analysis/</loc>
+    
+    <lastmod>2023-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/tags/index.html</loc>
+    
+    <lastmod>2023-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/categories/index.html</loc>
+    
+    <lastmod>2023-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/2023/07/06/hello-world/</loc>
+    
+    <lastmod>2023-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/about/index.html</loc>
+    
+    <lastmod>2023-07-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://zhangrong.cc/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://zhangrong.cc/tags/Go%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E5%AE%9D%E5%85%B8/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/tags/go/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/tags/%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://zhangrong.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangrong.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Go%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E5%AE%9D%E5%85%B8/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
